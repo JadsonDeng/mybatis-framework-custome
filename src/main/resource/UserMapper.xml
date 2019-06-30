@@ -1,0 +1,5 @@
+<mapper namespace="test">
+    <select id="queryOneById" parameterType="java.lang.Integer" resultType="com.jadson.study.User" statementType="prepared">
+        select id as id, name as userName, age as age from user where id = #{id}
+    </select>
+</mapper>
