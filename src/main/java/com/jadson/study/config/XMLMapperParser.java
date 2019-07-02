@@ -16,7 +16,7 @@ public class XMLMapperParser {
     }
 
     public void parse(InputStream inputStream) {
-        Document document = DocumentReader.read(inputStream);
+        Document document = new DocumentReader().read(inputStream);
         Element rootElement = document.getRootElement();
         List<Element> selects = rootElement.elements("select");
         for (Element element : selects) {

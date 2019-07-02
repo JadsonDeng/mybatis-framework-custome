@@ -13,7 +13,7 @@ public class SqlSessionFactoryBuilder {
 
     public SqlSessionFactory build(InputStream inputStream) {
         // TODO 将inputStream转换为Configration
-        Document document = DocumentReader.read(inputStream);
+        Document document = new DocumentReader().read(inputStream);
         configration = new XMLConfigParser().parse(document.getRootElement());
         return build();
 
