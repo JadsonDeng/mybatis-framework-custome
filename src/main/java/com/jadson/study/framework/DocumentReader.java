@@ -7,7 +7,7 @@ import org.dom4j.io.SAXReader;
 import java.io.InputStream;
 
 public class DocumentReader {
-    static Document read(InputStream inputStream) {
+    public static Document read(InputStream inputStream) {
         Document document = null;
 
         try {
