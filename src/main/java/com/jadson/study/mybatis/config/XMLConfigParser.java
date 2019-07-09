@@ -1,9 +1,8 @@
-package com.jadson.study.config;
+package com.jadson.study.mybatis.config;
 
 import org.apache.commons.dbcp.BasicDataSource;
 import org.dom4j.Element;
 
-import javax.sql.DataSource;
 import java.io.InputStream;
 import java.util.List;
 import java.util.Properties;

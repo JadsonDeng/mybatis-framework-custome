@@ -1,4 +1,4 @@
-package com.jadson.study.config;
+package com.jadson.study.mybatis.config;
 
 import javax.sql.DataSource;
 

@@ -1,4 +1,4 @@
-package com.jadson.study.framework;
+package com.jadson.study.mybatis.framework;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;

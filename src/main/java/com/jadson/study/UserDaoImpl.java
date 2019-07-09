@@ -1,7 +1,7 @@
 package com.jadson.study;
 
-import com.jadson.study.framework.SqlSession;
-import com.jadson.study.framework.SqlSessionFactory;
+import com.jadson.study.mybatis.framework.SqlSession;
+import com.jadson.study.mybatis.framework.SqlSessionFactory;
 
 public class UserDaoImpl implements UserDao {
 

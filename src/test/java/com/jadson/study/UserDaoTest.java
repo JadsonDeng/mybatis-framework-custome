@@ -1,7 +1,7 @@
 package com.jadson.study;
 
-import com.jadson.study.framework.SqlSessionFactory;
-import com.jadson.study.framework.SqlSessionFactoryBuilder;
+import com.jadson.study.mybatis.framework.SqlSessionFactory;
+import com.jadson.study.mybatis.framework.SqlSessionFactoryBuilder;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,7 +1,7 @@
-package com.jadson.study.framework;
+package com.jadson.study.mybatis.framework;
 
-import com.jadson.study.config.Configration;
-import com.jadson.study.config.XMLConfigParser;
+import com.jadson.study.mybatis.config.Configration;
+import com.jadson.study.mybatis.config.XMLConfigParser;
 import org.dom4j.Document;
 
 import java.io.InputStream;

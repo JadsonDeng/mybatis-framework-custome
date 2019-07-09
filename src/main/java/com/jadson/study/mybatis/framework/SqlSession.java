@@ -1,4 +1,4 @@
-package com.jadson.study.framework;
+package com.jadson.study.mybatis.framework;
 
 import java.util.List;
 

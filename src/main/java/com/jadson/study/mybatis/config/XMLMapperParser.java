@@ -1,6 +1,6 @@
-package com.jadson.study.config;
+package com.jadson.study.mybatis.config;
 
-import com.jadson.study.framework.DocumentReader;
+import com.jadson.study.mybatis.framework.DocumentReader;
 import org.dom4j.Document;
 import org.dom4j.Element;
 
