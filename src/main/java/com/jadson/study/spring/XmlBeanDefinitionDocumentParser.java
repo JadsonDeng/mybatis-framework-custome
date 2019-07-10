@@ -1,5 +1,7 @@
 package com.jadson.study.spring;
 
+import com.jadson.study.util.ReflectUtil;
+import com.jadson.study.util.Util;
 import org.dom4j.Element;
 
 import java.util.List;
@@ -36,6 +38,7 @@ public class XmlBeanDefinitionDocumentParser {
 
     /**
      * 解析bean标签
+     *
      * @param element
      */
     private void parseDefaultElement(Element element) {
@@ -70,11 +73,31 @@ public class XmlBeanDefinitionDocumentParser {
     }
 
     private void registBeanDefinition(BeanDefinition beanDefinition) {
+        this.beanFactory.registBeanDefinition(beanDefinition);
     }
 
     private void parsePropertyElement(Element property, BeanDefinition beanDefinition) {
         String name = property.attributeValue("name");
         String value = property.attributeValue("value");
-        beanDefinition.addPropertyValue(new PropertyValue(name, value));
+        String ref = property.attributeValue("ref");
+
+        if (Util.isNotEmpty(value) && Util.isNotEmpty(ref)) {
+            // 如果value和red都不为空，则跳过
+            return;
+        }
+
+        if (Util.isNotEmpty(value)) {
+            // 处理value
+            TypedStringValue typedStringValue = new TypedStringValue(value);
+            Class<?> fieldClass = ReflectUtil.getTypeByFieldName(beanDefinition.getBeanClassName(), name);
+            typedStringValue.setTargetType(fieldClass);
+            beanDefinition.addPropertyValue(new PropertyValue(name, typedStringValue));
+        } else {
+            // 处理ref
+            RuntimeBeanReference reference = new RuntimeBeanReference(ref);
+            PropertyValue propertyValue = new PropertyValue(name, reference);
+            beanDefinition.addPropertyValue(propertyValue);
+        }
+
     }
 }

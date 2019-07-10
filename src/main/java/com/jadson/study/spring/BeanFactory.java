@@ -5,4 +5,6 @@ public interface BeanFactory {
     Object getBean(String beanName);
 
     <T> T getBean(Class<T> clazz);
+
+    void registBeanDefinition(BeanDefinition beanDefinition);
 }

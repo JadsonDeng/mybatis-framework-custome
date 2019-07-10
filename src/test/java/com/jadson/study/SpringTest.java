@@ -1,5 +1,6 @@
 package com.jadson.study;
 
+import com.jadson.study.spring.BeanFactory;
 import com.jadson.study.spring.DefaultListableBeanFactory;
 import org.junit.Test;
 
@@ -8,6 +9,8 @@ public class SpringTest {
 
     @Test
     public void test() {
-        DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory("classpath:beans.xml");
+        BeanFactory beanFactory = new DefaultListableBeanFactory("classpath:beans.xml");
+        Object course = beanFactory.getBean("course");
+        System.out.println(course);
     }
 }

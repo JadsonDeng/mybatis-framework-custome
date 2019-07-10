@@ -12,7 +12,6 @@ public class ClassPathResourceLoader implements ResourceLoader {
 
     @Override
     public Resource load(String location) {
-        String[] strings = location.split(":");
-        return new ClassPathResource(strings[1]);
+        return new ClassPathResource(location.replace("classpath:",""));
     }
 }
