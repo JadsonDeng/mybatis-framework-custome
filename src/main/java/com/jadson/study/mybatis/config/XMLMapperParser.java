@@ -1,6 +1,6 @@
 package com.jadson.study.mybatis.config;
 
-import com.jadson.study.mybatis.framework.DocumentReader;
+import com.jadson.study.util.DocumentReader;
 import org.dom4j.Document;
 import org.dom4j.Element;
 
@@ -16,7 +16,7 @@ public class XMLMapperParser {
     }
 
     public void parse(InputStream inputStream) {
-        Document document = new DocumentReader().read(inputStream);
+        Document document = DocumentReader.read(inputStream);
         Element rootElement = document.getRootElement();
         List<Element> selects = rootElement.elements("select");
         for (Element element : selects) {

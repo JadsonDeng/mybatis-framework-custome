@@ -1,4 +1,4 @@
-package com.jadson.study.mybatis.framework;
+package com.jadson.study.util;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -7,7 +7,7 @@ import org.dom4j.io.SAXReader;
 import java.io.InputStream;
 
 public class DocumentReader {
-    public Document read(InputStream inputStream) {
+    public static Document read(InputStream inputStream) {
         Document document = null;
 
         try {
