@@ -1,7 +1,5 @@
 package com.jadson.study.spring.convertor;
 
-import com.jadson.study.spring.TypedConvertor;
-
 public class IntegerTypedConvertor implements TypedConvertor {
     @Override
     public boolean isType(Class<?> clazz) {

@@ -1,4 +1,4 @@
-package com.jadson.study.spring;
+package com.jadson.study.spring.config;
 
 import java.util.ArrayList;
 import java.util.List;

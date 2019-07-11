@@ -1,7 +1,7 @@
 package com.jadson.study;
 
-import com.jadson.study.spring.BeanFactory;
-import com.jadson.study.spring.DefaultListableBeanFactory;
+import com.jadson.study.spring.factory.BeanFactory;
+import com.jadson.study.spring.factory.DefaultListableBeanFactory;
 import org.junit.Test;
 
 public class SpringTest {

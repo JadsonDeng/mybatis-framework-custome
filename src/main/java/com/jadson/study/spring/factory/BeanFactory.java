@@ -1,4 +1,6 @@
-package com.jadson.study.spring;
+package com.jadson.study.spring.factory;
+
+import com.jadson.study.spring.config.BeanDefinition;
 
 public interface BeanFactory {
 
