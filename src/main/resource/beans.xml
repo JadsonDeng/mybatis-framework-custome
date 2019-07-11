@@ -1,12 +1,12 @@
 <beans>
     <bean id="student" class="com.jadson.study.spring.model.Student">
         <property name="name" value="jadson"/>
-        <property name="age" ref="course"/>
+        <property name="course" ref="course"/>
     </bean>
 
     <bean id="course" class="com.jadson.study.spring.model.Course" init-method="init">
         <property name="name" value="spring"/>
         <property name="age" value="18"/>
-        <constructor index="0" value="james"/>
+        <!--<constructor index="0" value="james"/>-->
     </bean>
 </beans>
